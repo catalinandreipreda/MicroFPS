@@ -3,7 +3,9 @@ guid: 5e1fea5cb3ddbc249bd0181e6766db68
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - EndGameFadeCanvasGroup: {instanceID: 0}
+  - VictorySound: {fileID: 8300000, guid: 80aa834921dc0498a9f87f9ed39bcf2f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
