@@ -16,6 +16,9 @@ namespace Unity.FPS.UI
 
         [Tooltip("Slider component for look sensitivity")]
         public Slider LookSensitivitySlider;
+        
+        [Tooltip("Slider component for volume")]
+        public Slider VolumeSlider;
 
         [Tooltip("Toggle component for shadows")]
         public Toggle ShadowsToggle;
@@ -49,6 +52,9 @@ namespace Unity.FPS.UI
 
             LookSensitivitySlider.value = m_PlayerInputsHandler.LookSensitivity;
             LookSensitivitySlider.onValueChanged.AddListener(OnMouseSensitivityChanged);
+
+            VolumeSlider.value = AudioUtility.GetMasterVolume();
+            VolumeSlider.onValueChanged.AddListener(OnVolumeChanged);
 
             ShadowsToggle.isOn = QualitySettings.shadows != ShadowQuality.Disable;
             ShadowsToggle.onValueChanged.AddListener(OnShadowsChanged);
@@ -129,6 +135,11 @@ namespace Unity.FPS.UI
         void OnMouseSensitivityChanged(float newValue)
         {
             m_PlayerInputsHandler.LookSensitivity = newValue;
+        }
+        
+        void OnVolumeChanged(float newValue)
+        {
+            AudioUtility.SetMasterVolume(newValue);
         }
 
         void OnShadowsChanged(bool newValue)
