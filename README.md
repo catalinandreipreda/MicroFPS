@@ -1,5 +1,6 @@
 # Overview
 CE318 assignment consisting of designing and implementing a 3D game in Unity3D.
+Simple 2 level FPS with the feel of old arcade shooters. Implemented with the [Unity FPS Microgame](https://assetstore.unity.com/packages/templates/unity-learn-fps-microgame-urp-156015) asset as foundation.
 
 ## Where can you play it?
 
